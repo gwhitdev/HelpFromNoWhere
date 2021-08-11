@@ -47,6 +47,7 @@ return [
         // Features::api(),
         Features::teams(['invitations' => true]),
         Features::accountDeletion(),
+        Features::profilePhotos(),
     ],
 
     /*
@@ -60,6 +61,6 @@ return [
     |
     */
 
-    'profile_photo_disk' => 'public',
+    'profile_photo_disk' => 's3',
 
 ];
