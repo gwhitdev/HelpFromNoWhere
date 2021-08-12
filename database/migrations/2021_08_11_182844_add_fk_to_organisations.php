@@ -14,8 +14,10 @@ class AddFkToOrganisations extends Migration
     public function up()
     {
         Schema::table('organisations', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrain('users');
-            $table->foreignId('visibility_id')->constrain('visibilities');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('visibility_id');
+            $table->foreign('visibility_id')->references('id')->on('visibilities');
         });
     }
 

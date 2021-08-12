@@ -15,32 +15,32 @@ class StatusSeeder extends Seeder
     public function run()
     {
         DB::table('statuses')->insert([
-            'status' => 'Needs Help',
+            'name' => 'Needs Help',
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('statuses')->insert([
-            'status' => 'Planning',
+            'name' => 'Planning',
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('statuses')->insert([
-            'status' => 'Planned',
+            'name' => 'Planned',
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('statuses')->insert([
-            'status' => 'In Progress',
+            'name' => 'In Progress',
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('statuses')->insert([
-            'status' => 'To Be Continued',
+            'name' => 'To Be Continued',
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('statuses')->insert([
-            'status' => 'Completed',
+            'name' => 'Completed',
             'created_at' => now(),
             'updated_at' => now()
         ]);

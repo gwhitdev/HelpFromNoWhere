@@ -16,7 +16,7 @@ class CreateVisibilitiesTable extends Migration
         Schema::create('visibilities', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('option');
+            $table->string('name');
         });
     }
 

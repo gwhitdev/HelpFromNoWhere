@@ -14,7 +14,8 @@ class AddOrganisationFkToOpportunities extends Migration
     public function up()
     {
         Schema::table('opportunities', function (Blueprint $table) {
-            $table->foreignId('organisation_id')->constrain('organisations');
+            $table->unsignedBigInteger('organisation_id');
+            $table->foreign('organisation_id')->references('id')->on('organisations');
         });
     }
 
@@ -26,7 +27,9 @@ class AddOrganisationFkToOpportunities extends Migration
     public function down()
     {
         Schema::table('opportunities', function (Blueprint $table) {
+            //$table->dropColumn('organisation_id');
             $table->dropForeign(['organisation_id']);
+           
         });
     }
 }

@@ -15,27 +15,27 @@ class VisibilitySeeder extends Seeder
     public function run()
     {
         DB::table('visibilities')->insert([
-            'option' => 'Draft',
+            'name' => 'Draft',
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('visibilities')->insert([
-            'option' => 'Live',
+            'name' => 'Live',
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('visibilities')->insert([
-            'option' => 'In Review',
+            'name' => 'In Review',
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('visibilities')->insert([
-            'option' => 'Hidden',
+            'name' => 'Hidden',
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('visibilities')->insert([
-            'option' => 'Blocked',
+            'name' => 'Blocked',
             'created_at' => now(),
             'updated_at' => now()
         ]);
