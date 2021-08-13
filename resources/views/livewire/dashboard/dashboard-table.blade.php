@@ -2,7 +2,9 @@
     <div>
         <span class="font-bold">{{ ucwords($table) }} List <a class="hover:underline "href="/{{strtolower($table)}}/new">[Add]</a></span>
     </div>
-    
+    @if(count($model) == 0)
+        <div>None available</div>
+    @else
     <table @class(['table-auto','w-full', 'bg-red-100'=>$colour == 'red', 'bg-blue-100' => $colour == 'blue','bg-yellow-100'=>$colour == 'yellow'])>
         <thead>
             <tr>
@@ -22,10 +24,11 @@
                     {{ $m->id }}
                 </td>
                 <td class="px-2">
-                    <a class="hover:underline" href="/{{ strtolower($table) }}/{{ $m->id }}/details">{{ $m->name }}</a>
+                    <a class="hover:underline" href="/{{ strtolower($table) }}/{{ $m->id }}">{{ $m->name }}</a>
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
+    @endif
 </div>
